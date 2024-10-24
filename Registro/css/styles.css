@@ -1,0 +1,193 @@
+/* Estilo General */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #002855;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+    color: #C8102E;
+}
+
+button {
+    background-color: #002855;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #C8102E;
+}
+
+/* Estilos del Menú */
+.sidebar {
+    background-color: #002855;
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.sidebar h2 a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #C8102E;
+}
+
+.content {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+/* Estilos del formulario de inscripción */
+.form-inscripcion {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+}
+
+/* Estilos para la tabla de horarios */
+.schedule {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.schedule th, .schedule td {
+    border: 1px solid #002855; 
+    padding: 10px;
+    text-align: center;
+}
+
+.schedule th {
+    background-color: #C8102E; /* Color rojo UNI */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.schedule td {
+    background-color: #f5f5f5;
+    color: #002855;
+}
+
+.schedule tr:nth-child(even) td {
+    background-color: #e0e0e0; /* Color alternativo para las filas pares */
+}
+
+.schedule tr:hover td {
+    background-color: #C8102E; /* Resaltar fila al pasar el ratón */
+    color: white;
+}
+
+.schedule td:first-child, .schedule th:first-child {
+    background-color: #002855;
+    color: white;
+    font-weight: bold;
+}
+
+/* Estilos del Login del docente */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.login-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #002855;
+}
+
+.login-box .logo-uni {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box label {
+    text-align: left;
+    font-weight: bold;
+    color: #002855;
+}
+
+.login-box input {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-box button {
+    padding: 10px;
+    background-color: #002855;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-box button:hover {
+    background-color: #C8102E;
+}
+
+#login-box p#error-message {
+    display: none;
+    color: red;
+}

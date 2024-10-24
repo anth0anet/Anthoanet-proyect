@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistencia</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="sidebar">
+        <img src="img/logo_uni.png" alt="Logo UNI" style="width: 80%; margin: 0 auto; display: block;">
+        <h2><i class="fa-solid fa-bars"><a href="menu.html">  Menu</a></i></h2>
+        <ul class="main-menu">
+            <li class="submenu"><a href="#">General</a></li>
+            <ul class="submenu-items" id="general-submenu" style="display: none;">
+                <li><a href="horario.html">Mi Horario de Clases</a></li>
+                <li><a href="docente.html">Información Docente</a></li>
+                <li><a href="#">Mis Cursos Asignados</a></li>
+                <li><a href="asistencia.html">Asistencia</a></li>
+                <li><a href="#">Cargar Notas ORCE</a></li>
+                <li><a href="#">Biblioteca Virtual</a></li>
+            </ul>
+            <li class="submenu"><a href="#">Administrador</a></li>
+            <li class="submenu"><a href="#">Acreditación FIM</a></li>
+            <li class="submenu"><a href="#">Virtual</a></li>
+            <li class="submenu"><a href="#">Documentos académicos</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>Registro de Asistencia</h1>
+
+        <!-- Asistencia del docente -->
+        <div>
+            <label for="nombre-docente">Nombre del Docente:</label>
+            <input type="text" id="nombre-docente" required>
+            <button id="registrar-asistencia-docente">Registrar Asistencia Docente</button>
+            <div id="asistencia-docente-message" style="display:none;">
+                <h3>Asistencia del Docente</h3>
+                <div id="docente-asistencia"></div>
+            </div>
+        </div>
+
+        <!-- Habilitar asistencia para alumnos -->
+        <div>
+            <button id="habilitar-asistencia-alumnos">Habilitar Asistencia Alumnos</button>
+            <table id="asistencia-alumnos" style="display:none;">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Asistencia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alumno 1</td>
+                        <td><input type="checkbox" class="asistencia-alumno"></td>
+                    </tr>
+                    <tr>
+                        <td>Alumno 2</td>
+                        <td><input type="checkbox" class="asistencia-alumno"></td>
+                    </tr>
+                    <tr>
+                        <td>Alumno 3</td>
+                        <td><input type="checkbox" class="asistencia-alumno"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="guardar-asistencia-alumnos">Guardar Asistencia</button>
+        </div>
+
+        <!-- Tabla para mostrar asistencias registradas -->
+        <div>
+            <h3>Asistencias Registradas de Alumnos</h3>
+            <table id="asistencias-registradas" style="display:none;">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Fecha y Hora</th>
+                    </tr>
+                </thead>
+                <tbody id="asistencias-body"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/asistencia.js"></script>
+</body>
+</html>
